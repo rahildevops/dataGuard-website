@@ -5,7 +5,8 @@ const nextConfig = {
     domains: ['localhost'],
     unoptimized: true
   },
-  trailingSlash: true
+  trailingSlash: true,
+  output: 'export' // ⬅️ NEW: enable static export
 }
 
 module.exports = nextConfig
