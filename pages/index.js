@@ -298,14 +298,11 @@ export default function Home() {
           <div className="container mx-auto px-6 py-16 relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div className="text-center lg:text-left">
-                <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow-2xl mb-4">
+                <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white drop-shadow-2xl mb-4">
                   Data Guard
                 </h1>
-                <p className="text-lg md:text-xl text-cyan-100 drop-shadow-lg font-medium mb-4">
-                  Leading Implementation Partner for CIAM, IAM & API Security Solutions
-                </p>
-                <p className="text-base text-white leading-relaxed mb-6">
-                  Trusted implementation experts specializing in enterprise-grade security solutions across CIAM, IAM, and API Security platforms worldwide.
+                <p className="text-xl md:text-2xl text-cyan-100 drop-shadow-lg font-semibold mb-6">
+                  Leading Implementation Partner for CIAM, IAM, API Security Solutions & Data Governance.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center space-y-4 sm:space-y-0 sm:space-x-4">
