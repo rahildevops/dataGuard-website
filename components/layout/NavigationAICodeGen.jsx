@@ -45,48 +45,7 @@ export default function NavigationAICodeGen() {
               <span className="relative z-10">Home</span>
             </a>
           </Link>
-          {/* Solutions Dropdown */}
-          <div
-            className="dropdown relative"
-            onMouseEnter={() => setOpenDropdown('solutions')}
-            onMouseLeave={() => setOpenDropdown(null)}
-          >
-            <button
-              className="relative px-4 py-2 text-gray-700 hover:text-cyan-600 transition-all font-medium group flex items-center focus:outline-none"
-              onClick={() => handleDropdown('solutions')}
-              aria-haspopup="true"
-              aria-expanded={openDropdown === 'solutions'}
-              type="button"
-            >
-              <span className="relative z-10">Solutions</span>
-              <svg className={`w-4 h-4 ml-1 relative z-10 transition-transform duration-200 ${openDropdown === 'solutions' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
-              </svg>
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-100 to-blue-100 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity -z-0"></div>
-            </button>
-            <div
-              className={`dropdown-content-professional absolute left-0 mt-2 min-w-[260px] bg-white rounded-xl shadow-lg border border-cyan-100 z-50 ${openDropdown === 'solutions' ? '' : 'hidden'}`}
-            >
-              <a href="#deployment" className="dropdown-item-professional">
-                <span className="text-blue-600 mr-3">⚡</span>
-                <div className="font-medium">Deployment Accelerator</div>
-              </a>
-              <a href="#sdks" className="dropdown-item-professional">
-                <span className="text-cyan-600 mr-3">📚</span>
-                <div className="font-medium">Custom SDK&apos;s</div>
-              </a>
-              <Link href="/ai-code-generator/" legacyBehavior>
-                <a className="dropdown-item-professional">
-                  <span className="text-purple-600 mr-3">🤖</span>
-                  <div className="font-medium">AI Code Generator</div>
-                </a>
-              </Link>
-              <a href="#migration" className="dropdown-item-professional">
-                <span className="text-green-600 mr-3">🔄</span>
-                <div className="font-medium">Migration Automation Kit</div>
-              </a>
-            </div>
-          </div>
+          {/* Solutions removed per request */}
           {/* Services Dropdown */}
           <div
             className="dropdown relative"
