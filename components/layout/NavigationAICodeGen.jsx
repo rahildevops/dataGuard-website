@@ -121,6 +121,10 @@ export default function NavigationAICodeGen() {
                 <span className="text-red-600 mr-3">🛡️</span>
                 <div className="font-medium">PAM</div>
               </a>
+              <a href="/data-governance" className="dropdown-item-professional">
+                <span className="text-emerald-600 mr-3">📚</span>
+                <div className="font-medium">Data Governance</div>
+              </a>
             </div>
           </div>
           <a href="#contact" className="relative px-4 py-2 text-white bg-cyan-600 hover:bg-cyan-700 transition-all font-medium rounded-full shadow-md flex items-center w-full md:w-auto justify-center">
