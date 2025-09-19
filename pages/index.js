@@ -287,10 +287,12 @@ export default function Home() {
                     <span className="text-red-600 mr-3">🛡️</span>
                     <div className="font-medium">PAM</div>
                   </a>
-                  <a href="/data-governance" className="dropdown-item-professional">
-                    <span className="text-emerald-600 mr-3">📚</span>
-                    <div className="font-medium">Data Governance</div>
-                  </a>
+                  <Link href="/data-governance" legacyBehavior>
+                    <a className="dropdown-item-professional">
+                      <span className="text-emerald-600 mr-3">📚</span>
+                      <div className="font-medium">Data Governance</div>
+                    </a>
+                  </Link>
                 </div>
               </div>
               
