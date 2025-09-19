@@ -42,6 +42,28 @@ export default function Home() {
       iconSvg: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>`
     },
     {
+      title: "PAM",
+      description: "Protect your most critical assets and data by securing, managing, and monitoring all privileged accounts and administrative sessions.",
+      features: [
+        { name: "Automated Privileged Account Discovery and Secure Vault Management" },
+        { name: "Full Session Recording with Real-Time Monitoring and Analysis" },
+        { name: "Just-in-Time Access with Zero Standing Privilege Implementation" }
+      ],
+      iconGradient: "from-red-500 to-orange-600",
+      iconSvg: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1721 9z"></path>`
+    },
+    {
+      title: "DevOps for IAM",
+      description: "CI/CD pipelines, infrastructure as code, and deployment workflows for identity platforms to ensure repeatable, secure, and auditable rollouts.",
+      features: [
+        { name: "Infrastructure as Code for Identity Services" },
+        { name: "Automated Blue/Green & Canary Deployments" },
+        { name: "Secure Secrets Management & Vault Integration" }
+      ],
+      iconGradient: "from-sky-500 to-cyan-500",
+      iconSvg: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18M5 7v10"/>`
+    },
+    {
       title: "API Security",
       description: "Protect your digital ecosystem with a robust API security framework, providing real-time threat detection and intelligent response capabilities.",
       features: [
@@ -53,15 +75,15 @@ export default function Home() {
       iconSvg: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>`
     },
     {
-      title: "PAM",
-      description: "Protect your most critical assets and data by securing, managing, and monitoring all privileged accounts and administrative sessions.",
+      title: "Data Governance",
+      description: "Design and implement governance frameworks that manage data lineage, classification, access controls, and compliance across identity and API ecosystems.",
       features: [
-        { name: "Automated Privileged Account Discovery and Secure Vault Management" },
-        { name: "Full Session Recording with Real-Time Monitoring and Analysis" },
-        { name: "Just-in-Time Access with Zero Standing Privilege Implementation" }
+        { name: "Data Classification & Access Policies" },
+        { name: "Lineage, Auditing & Compliance Reporting" },
+        { name: "Integration with Identity & Access Controls" }
       ],
-      iconGradient: "from-red-500 to-orange-600",
-      iconSvg: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1721 9z"></path>`
+      iconGradient: "from-emerald-500 to-teal-500",
+      iconSvg: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2v20M2 12h20M5 5l14 14"/>`
     },
     {
       title: "Fraud Prevention",
@@ -84,35 +106,12 @@ export default function Home() {
       ],
       iconGradient: "from-yellow-500 to-amber-600",
       iconSvg: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>`
-    }
+    },
   ]), []);
 
   const servicesRowRef = useRef(null);
-  const [scrollIndex, setScrollIndex] = useState(0);
   const [mounted, setMounted] = useState(false);
-  const cardsPerView = 3;
   useEffect(() => { setMounted(true); }, []);
-  useEffect(() => {
-    if (!servicesRowRef.current) return;
-    const totalCards = services.length;
-    const interval = setInterval(() => {
-      setScrollIndex(prev => {
-        // Move right: decrement index, loop to end if at start
-        const next = prev - 1;
-        return next < 0 ? totalCards - cardsPerView : next;
-      });
-    }, 4000);
-    return () => clearInterval(interval);
-  }, [services.length]);
-  useEffect(() => {
-    if (!servicesRowRef.current) return;
-    const cardWidth = 320;
-    const gap = 64; // 4rem = 64px for space-x-16
-    servicesRowRef.current.scrollTo({
-      left: scrollIndex * (cardWidth + gap),
-      behavior: 'smooth',
-    });
-  }, [scrollIndex]);
 
   // Flatten all platforms into a single array for smooth auto-scroll
   const allPlatforms = useMemo(() => [
@@ -198,6 +197,10 @@ export default function Home() {
       <Head>
         <title>Data Guard</title>
         <meta name="description" content="Leading Implementation Partner for CIAM, IAM & API Security Solutions" />
+        <style>{`
+          @keyframes marquee-rtl { 0% { transform: translateX(0%); } 100% { transform: translateX(-50%); } }
+          .marquee-rtl { display: flex; gap: 2rem; width: 200%; animation: marquee-rtl 30s linear infinite; }
+        `}</style>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   {/* Custom font links moved to pages/_document.js for global usage */}
       </Head>
@@ -337,31 +340,29 @@ export default function Home() {
           <section id="offerings" className="py-6 px-4 bg-gradient-to-br from-white via-blue-50/40 to-cyan-50/50 rounded-2xl shadow-xl mb-10 border border-gray-300/50">
             <div className="container mx-auto px-2">
               <div className="text-center mb-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-800 tracking-tight mb-3">Our Services</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-800 tracking-tight mb-3">Solutions & Implementations</h2>
                 <div className="w-20 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto rounded-full mb-3"></div>
               </div>
               <div className="overflow-x-auto">
                 {mounted ? (
-                  <div
-                    className="flex space-x-16 no-scrollbar overflow-x-hidden mx-auto"
-                    style={{ width: 'calc(3 * 320px + 2 * 4rem)' }}
-                    ref={servicesRowRef}
-                  >
-                    {services.map((service) => (
-                      <div
-                        key={service.title}
-                        className="group relative bg-gradient-to-br from-white/95 via-blue-50/30 to-cyan-50/40 rounded-xl shadow-xl hover:shadow-2xl border border-gray-300/60 p-8 transform transition-all duration-500 hover:scale-[1.01] cursor-pointer overflow-hidden flex flex-col items-start"
-                        style={{ flex: '0 0 320px', maxWidth: '320px', minWidth: '320px' }}
-                      >
-                        <div className="flex items-center w-full mb-4">
-                          <div className={`flex-shrink-0 p-2 rounded-lg bg-gradient-to-br ${service.iconGradient} text-white shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105 mr-3`}>
-                            <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" dangerouslySetInnerHTML={{ __html: service.iconSvg }} />
+                  <div className="overflow-hidden">
+                    <div className="marquee-rtl">
+                      {[...services, ...services].map((service, idx) => (
+                        <div
+                          key={`${service.title}-${idx}`}
+                          className="group relative bg-gradient-to-br from-white/95 via-blue-50/30 to-cyan-50/40 rounded-xl shadow-xl border border-gray-300/60 p-8 transform transition-all duration-500 hover:scale-[1.01] cursor-pointer overflow-hidden flex flex-col items-start"
+                          style={{ flex: '0 0 320px', maxWidth: '320px', minWidth: '320px' }}
+                        >
+                          <div className="flex items-center w-full mb-4">
+                            <div className={`flex-shrink-0 p-2 rounded-lg bg-gradient-to-br ${service.iconGradient} text-white shadow-lg transition-all duration-300 mr-3`}>
+                              <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" dangerouslySetInnerHTML={{ __html: service.iconSvg }} />
+                            </div>
+                            <h3 className="text-2xl font-bold text-blue-700 tracking-tight mb-0 uppercase drop-shadow-sm text-left">{service.title}</h3>
                           </div>
-                          <h3 className="text-2xl font-bold text-blue-700 tracking-tight mb-0 uppercase drop-shadow-sm text-left">{service.title}</h3>
+                          <p className="text-gray-700 text-lg text-left leading-relaxed mb-0">{service.description}</p>
                         </div>
-                        <p className="text-gray-700 text-lg text-left leading-relaxed mb-0">{service.description}</p>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
                 ) : (
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mx-auto">
