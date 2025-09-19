@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import Navigation from '../components/layout/Navigation'
-
 export default function DataGovernance() {
   return (
     <>
@@ -28,15 +27,31 @@ export default function DataGovernance() {
         <main className="container mx-auto px-6 py-12">
           <section id="unified-dictionary" className="mb-12">
             <h2 className="text-2xl font-bold mb-3">Unified Data Dictionary</h2>
-            <p className="text-gray-700 mb-4 font-semibold">Our centralized repository forms the foundation of every module with bilingual (Arabic/English) support for all file-types, document-types and information-types. Essential foundation for consistent data governance.</p>
-            <div className="bg-white rounded-lg shadow p-6">
-              <h3 className="font-semibold text-lg mb-2">Key Features</h3>
-              <ul className="list-none space-y-2 text-gray-700">
-                <li>✓ Accepts patterns (regex), keyword lists, manual entries</li>
-                <li>✓ AI-suggested terms that learn over time</li>
-                <li>✓ Multi-format support: text, images, PDF/XPS, Office, CAD</li>
-                <li>✓ Feeds all modules for policy-driven consistency</li>
-              </ul>
+            <div className="flex flex-col md:flex-row items-stretch gap-6">
+              <div className="md:flex-1 md:pr-6">
+                <p className="text-gray-700 mb-4 text-left">Our centralized repository forms the foundation of every module with bilingual (Arabic/English) support for all file-types, document-types and information-types. Essential foundation for consistent data governance.</p>
+                <div className="bg-white rounded-lg shadow p-6">
+                  <h4 className="font-semibold text-lg mb-2">Key Features</h4>
+                  <ul className="list-none space-y-2 text-gray-700">
+                    <li>✓ Accepts patterns (regex), keyword lists, manual entries</li>
+                    <li>✓ AI-suggested terms that learn over time</li>
+                    <li>✓ Multi-format support: text, images, PDF/XPS, Office, CAD</li>
+                    <li>✓ Feeds all modules for policy-driven consistency</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="w-full md:w-80 flex-shrink-0 md:ml-4">
+                <div className="relative h-64 md:h-full rounded-md overflow-hidden dg-scale">
+                  <Image
+                    src="/images/Unified Data Dictionary.png"
+                    alt="Unified Data Dictionary"
+                    fill
+                    sizes="(max-width: 768px) 260px, 400px"
+                    className="object-cover"
+                  />
+                </div>
+              </div>
             </div>
           </section>
 
@@ -161,6 +176,15 @@ export default function DataGovernance() {
           </section>
 
         </main>
+
+        <style jsx>{`
+          @media (min-width: 768px) {
+            .dg-scale {
+              transform: scaleX(1.3) scaleY(1.25);
+              transform-origin: bottom center;
+            }
+          }
+        `}</style>
 
         <footer className="bg-white/90 border-t py-6">
           <div className="container mx-auto px-6 text-center text-sm text-gray-600">
