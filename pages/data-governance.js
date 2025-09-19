@@ -7,7 +7,7 @@ export default function DataGovernance() {
   return (
     <>
       <Head>
-        <title>DataMind — Data Governance & Security Solutions</title>
+        <title>DataGuard — Data Governance & Security Solutions</title>
         <meta name="description" content="Complete Data Governance and Security Solutions tailored for Saudi PDPL and NCA requirements." />
       </Head>
 
@@ -18,13 +18,9 @@ export default function DataGovernance() {
             <div className="flex flex-col md:flex-row items-center justify-between">
               <div>
                 <h1 className="text-3xl md:text-4xl font-extrabold">Complete Data Governance and Security Solutions</h1>
-                <p className="mt-2 text-cyan-100 max-w-2xl">Explore DataMind&apos;s integrated modules, purpose-built specifically for Saudi compliance and the unique needs of organizations in the Kingdom.</p>
+                <p className="mt-2 text-cyan-100 max-w-2xl">Explore DataGuard&apos;s integrated modules, purpose-built specifically for Saudi compliance and the unique needs of organizations in the Kingdom.</p>
               </div>
-              <div className="mt-6 md:mt-0">
-                <Link href="/" legacyBehavior>
-                  <a className="inline-flex items-center bg-white text-cyan-600 px-4 py-2 rounded-full font-semibold shadow">Back to Home</a>
-                </Link>
-              </div>
+              {/* removed Back to Home button per request */}
             </div>
           </div>
         </header>
@@ -168,7 +164,7 @@ export default function DataGovernance() {
 
         <footer className="bg-white/90 border-t py-6">
           <div className="container mx-auto px-6 text-center text-sm text-gray-600">
-            © {new Date().getFullYear()} DataMind — All rights reserved.
+            © {new Date().getFullYear()} DataGuard — All rights reserved.
           </div>
         </footer>
       </div>
