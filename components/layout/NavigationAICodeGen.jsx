@@ -86,12 +86,45 @@ export default function NavigationAICodeGen() {
               </a>
             </div>
           </div>
-          <a href="#about" className="relative px-4 py-2 text-gray-700 hover:text-cyan-600 transition-all font-medium group w-full md:w-auto text-center">
-            <span className="relative z-10">About</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-cyan-100 to-blue-100 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity -z-0"></div>
-          </a>
-          <a href="#contact" className="relative px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-blue-600 transition-all shadow-md hover:shadow-lg w-full md:w-auto text-center">
-            Contact Us
+          <div
+            className="dropdown relative w-full md:w-auto"
+            onMouseEnter={() => setOpenDropdown('products')}
+            onMouseLeave={() => setOpenDropdown(null)}
+          >
+            <button
+              className="relative px-4 py-2 text-gray-700 hover:text-cyan-600 transition-all font-medium group w-full md:w-auto text-center flex items-center justify-center focus:outline-none"
+              onClick={() => handleDropdown('products')}
+              aria-haspopup="true"
+              aria-expanded={openDropdown === 'products'}
+              type="button"
+            >
+              <span className="relative z-10">Products</span>
+              <svg className={`w-4 h-4 ml-1 relative z-10 transition-transform duration-200 ${openDropdown === 'products' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-100 to-blue-100 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity -z-0"></div>
+            </button>
+            <div className={`dropdown-content-professional absolute left-0 mt-2 min-w-[220px] bg-white rounded-xl shadow-lg border border-cyan-100 z-50 ${openDropdown === 'products' ? '' : 'hidden'}`}>
+              <a href="#ciam" className="dropdown-item-professional">
+                <span className="text-indigo-600 mr-3">🔒</span>
+                <div className="font-medium">CIAM</div>
+              </a>
+              <a href="#workforce-iam" className="dropdown-item-professional">
+                <span className="text-cyan-600 mr-3">👥</span>
+                <div className="font-medium">Workforce IAM</div>
+              </a>
+              <a href="#api-security" className="dropdown-item-professional">
+                <span className="text-purple-600 mr-3">🔐</span>
+                <div className="font-medium">API Security</div>
+              </a>
+              <a href="#pam" className="dropdown-item-professional">
+                <span className="text-red-600 mr-3">🛡️</span>
+                <div className="font-medium">PAM</div>
+              </a>
+            </div>
+          </div>
+          <a href="#contact" className="relative px-4 py-2 text-white bg-cyan-600 hover:bg-cyan-700 transition-all font-medium rounded-full shadow-md flex items-center w-full md:w-auto justify-center">
+            <span className="relative z-10">Contact Us</span>
           </a>
         </div>
       </div>

@@ -114,7 +114,7 @@ export default function CustomSDK() {
           <div className="bg-gradient-to-r from-cyan-100 to-blue-100 rounded-xl p-6 mt-8 text-center shadow-md">
             <h3 className="text-xl font-semibold text-blue-800 mb-2">Ready to simplify your app integration?</h3>
             <p className="text-gray-700 mb-4">Contact us to learn how our SDKs and expert team can help you deliver seamless, secure user experiences—faster.</p>
-            <a href="#contact" className="inline-block bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-cyan-600 hover:to-blue-600 transition-all shadow-lg hover:shadow-xl">Get in Touch</a>
+              <a href="#contact" className="inline-block text-blue-600 font-semibold py-3 px-6 rounded-full text-lg hover:underline">Get in Touch</a>
           </div>
         </section>
       </main>

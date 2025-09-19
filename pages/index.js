@@ -257,13 +257,36 @@ export default function Home() {
                 </div>
               </div>
               
-              <a href="#about" className="relative px-4 py-2 text-gray-700 hover:text-cyan-600 transition-all font-medium group">
-                <span className="relative z-10">About</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-100 to-blue-100 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity -z-0"></div>
-              </a>
+              <div className="dropdown">
+                <a href="#products" className="relative px-4 py-2 text-gray-700 hover:text-cyan-600 transition-all font-medium group flex items-center">
+                  <span className="relative z-10">Products</span>
+                  <svg className="w-4 h-4 ml-1 relative z-10 transition-transform group-hover:rotate-180 duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-100 to-blue-100 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity -z-0"></div>
+                </a>
+                <div className="dropdown-content-professional">
+                  <a href="#ciam" className="dropdown-item-professional">
+                    <span className="text-indigo-600 mr-3">🔒</span>
+                    <div className="font-medium">CIAM</div>
+                  </a>
+                  <a href="#workforce-iam" className="dropdown-item-professional">
+                    <span className="text-cyan-600 mr-3">👥</span>
+                    <div className="font-medium">Workforce IAM</div>
+                  </a>
+                  <a href="#api-security" className="dropdown-item-professional">
+                    <span className="text-purple-600 mr-3">🔐</span>
+                    <div className="font-medium">API Security</div>
+                  </a>
+                  <a href="#pam" className="dropdown-item-professional">
+                    <span className="text-red-600 mr-3">🛡️</span>
+                    <div className="font-medium">PAM</div>
+                  </a>
+                </div>
+              </div>
               
-              <a href="#contact" className="relative px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-blue-600 transition-all shadow-md hover:shadow-lg">
-                Contact Us
+              <a href="#contact" className="relative px-4 py-2 text-white bg-cyan-600 hover:bg-cyan-700 transition-all font-medium rounded-full shadow-md flex items-center">
+                <span className="relative z-10">Contact Us</span>
               </a>
             </div>
           </div>
@@ -286,7 +309,7 @@ export default function Home() {
                 </p>
                 
                 <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center space-y-4 sm:space-y-0 sm:space-x-4">
-                  <a href="#contact" className="bg-white text-blue-600 font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                  <a href="#contact" className="text-white font-semibold py-3 px-6 rounded-full text-lg hover:underline transition-all">
                     Get Started
                   </a>
                   <a href="#offerings" className="bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-white hover:text-blue-600 transition-all shadow-lg">
