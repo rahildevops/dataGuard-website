@@ -89,7 +89,9 @@ export default function Home() {
 
   const servicesRowRef = useRef(null);
   const [scrollIndex, setScrollIndex] = useState(0);
+  const [mounted, setMounted] = useState(false);
   const cardsPerView = 3;
+  useEffect(() => { setMounted(true); }, []);
   useEffect(() => {
     if (!servicesRowRef.current) return;
     const totalCards = services.length;
@@ -329,25 +331,7 @@ export default function Home() {
         </header>
 
         <main className="container mx-auto p-4 md:p-8">
-          {/* Quick Stats Section */}
-          <section className="mb-16 grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
-            <div className="bg-gradient-to-br from-white to-cyan-50 rounded-xl shadow-lg p-6 hover:shadow-xl transition-all border border-cyan-200 group">
-              <p className="text-4xl font-extrabold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform">50+</p>
-              <p className="mt-2 text-sm font-medium text-gray-700">Successful Projects</p>
-            </div>
-            <div className="bg-gradient-to-br from-white to-blue-50 rounded-xl shadow-lg p-6 hover:shadow-xl transition-all border border-blue-200 group">
-              <p className="text-4xl font-extrabold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform">24/7</p>
-              <p className="mt-2 text-sm font-medium text-gray-700">Global Support</p>
-            </div>
-            <div className="bg-gradient-to-br from-white to-purple-50 rounded-xl shadow-lg p-6 hover:shadow-xl transition-all border border-purple-200 group">
-              <p className="text-4xl font-extrabold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform">10+</p>
-              <p className="mt-2 text-sm font-medium text-gray-700">Years Experience</p>
-            </div>
-            <div className="bg-gradient-to-br from-white to-emerald-50 rounded-xl shadow-lg p-6 hover:shadow-xl transition-all border border-emerald-200 group">
-              <p className="text-4xl font-extrabold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform">100%</p>
-              <p className="mt-2 text-sm font-medium text-gray-700">Client Satisfaction</p>
-            </div>
-          </section>
+          {/* Quick Stats removed per request */}
 
           {/* Our Services Section */}
           <section id="offerings" className="py-6 px-4 bg-gradient-to-br from-white via-blue-50/40 to-cyan-50/50 rounded-2xl shadow-xl mb-10 border border-gray-300/50">
@@ -357,27 +341,35 @@ export default function Home() {
                 <div className="w-20 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto rounded-full mb-3"></div>
               </div>
               <div className="overflow-x-auto">
-                <div
-                  className="flex space-x-16 no-scrollbar overflow-x-hidden mx-auto"
-                  style={{ width: 'calc(3 * 320px + 2 * 4rem)' }}
-                  ref={servicesRowRef}
-                >
-                  {services.map((service, idx) => (
-                    <div
-                      key={service.title}
-                      className="group relative bg-gradient-to-br from-white/95 via-blue-50/30 to-cyan-50/40 rounded-xl shadow-xl hover:shadow-2xl border border-gray-300/60 p-8 transform transition-all duration-500 hover:scale-[1.01] cursor-pointer overflow-hidden flex flex-col items-start"
-                      style={{ flex: '0 0 320px', maxWidth: '320px', minWidth: '320px' }}
-                    >
-                      <div className="flex items-center w-full mb-4">
-                        <div className={`flex-shrink-0 p-2 rounded-lg bg-gradient-to-br ${service.iconGradient} text-white shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105 mr-3`}>
-                          <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" dangerouslySetInnerHTML={{ __html: service.iconSvg }} />
+                {mounted ? (
+                  <div
+                    className="flex space-x-16 no-scrollbar overflow-x-hidden mx-auto"
+                    style={{ width: 'calc(3 * 320px + 2 * 4rem)' }}
+                    ref={servicesRowRef}
+                  >
+                    {services.map((service) => (
+                      <div
+                        key={service.title}
+                        className="group relative bg-gradient-to-br from-white/95 via-blue-50/30 to-cyan-50/40 rounded-xl shadow-xl hover:shadow-2xl border border-gray-300/60 p-8 transform transition-all duration-500 hover:scale-[1.01] cursor-pointer overflow-hidden flex flex-col items-start"
+                        style={{ flex: '0 0 320px', maxWidth: '320px', minWidth: '320px' }}
+                      >
+                        <div className="flex items-center w-full mb-4">
+                          <div className={`flex-shrink-0 p-2 rounded-lg bg-gradient-to-br ${service.iconGradient} text-white shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105 mr-3`}>
+                            <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" dangerouslySetInnerHTML={{ __html: service.iconSvg }} />
+                          </div>
+                          <h3 className="text-2xl font-bold text-blue-700 tracking-tight mb-0 uppercase drop-shadow-sm text-left">{service.title}</h3>
                         </div>
-                        <h3 className="text-2xl font-bold text-blue-700 tracking-tight mb-0 uppercase drop-shadow-sm text-left">{service.title}</h3>
+                        <p className="text-gray-700 text-lg text-left leading-relaxed mb-0">{service.description}</p>
                       </div>
-                      <p className="text-gray-700 text-lg text-left leading-relaxed mb-0">{service.description}</p>
-                    </div>
-                  ))}
-                </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mx-auto">
+                    <div className="h-40 rounded-xl bg-white/80 animate-pulse" />
+                    <div className="h-40 rounded-xl bg-white/80 animate-pulse" />
+                    <div className="h-40 rounded-xl bg-white/80 animate-pulse" />
+                  </div>
+                )}
               </div>
             </div>
           </section>
@@ -410,22 +402,31 @@ export default function Home() {
                     </div>
                     
                     <div className="relative z-10 px-8">
-                      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-3">
-                        {currentPlatforms.map((platform) => (
-                          <div key={platform.name} className="bg-gradient-to-br from-white to-blue-50/50 hover:from-blue-50/50 hover:to-cyan-50/50 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all p-4 h-36 w-full">
-                            <div className="flex items-center justify-center flex-col text-center h-full">
-                              <div className="h-20 w-full flex items-center justify-center mb-3">
-                                <div className="h-16 w-40 flex items-center justify-center">
-                                  <Image src={platform.logo} alt={platform.name} width={160} height={64} className="h-16 w-40 object-contain hover:scale-105 transition-transform" />
+                      {mounted ? (
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-3">
+                          {currentPlatforms.map((platform) => (
+                            <div key={platform.name} className="bg-gradient-to-br from-white to-blue-50/50 hover:from-blue-50/50 hover:to-cyan-50/50 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all p-4 h-36 w-full">
+                              <div className="flex items-center justify-center flex-col text-center h-full">
+                                <div className="h-20 w-full flex items-center justify-center mb-3">
+                                  <div className="h-16 w-40 flex items-center justify-center">
+                                    <Image src={platform.logo} alt={platform.name} width={160} height={64} className="h-16 w-40 object-contain hover:scale-105 transition-transform" />
+                                  </div>
+                                </div>
+                                <div className="text-center h-8 flex items-center justify-center">
+                                  <h4 className="text-sm font-semibold text-gray-800 leading-tight">{platform.name}</h4>
                                 </div>
                               </div>
-                              <div className="text-center h-8 flex items-center justify-center">
-                                <h4 className="text-sm font-semibold text-gray-800 leading-tight">{platform.name}</h4>
-                              </div>
                             </div>
-                          </div>
-                        ))}
-                      </div>
+                          ))}
+                        </div>
+                      ) : (
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-3">
+                          <div className="h-36 rounded-lg bg-white/80 animate-pulse" />
+                          <div className="h-36 rounded-lg bg-white/80 animate-pulse" />
+                          <div className="h-36 rounded-lg bg-white/80 animate-pulse" />
+                          <div className="h-36 rounded-lg bg-white/80 animate-pulse" />
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
