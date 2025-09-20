@@ -6,7 +6,7 @@ export default function DataGovernance() {
   return (
     <>
       <Head>
-        <title>DataGuard — Data Governance & Security Solutions</title>
+  <title>DataMind — Data Governance & Security Solutions</title>
         <meta name="description" content="Complete Data Governance and Security Solutions tailored for Saudi PDPL and NCA requirements." />
       </Head>
 
@@ -17,7 +17,7 @@ export default function DataGovernance() {
             <div className="flex flex-col md:flex-row items-center justify-between">
               <div>
                 <h1 className="text-3xl md:text-4xl font-extrabold">Complete Data Governance and Security Solutions</h1>
-                <p className="mt-2 text-cyan-100 max-w-2xl">Explore DataGuard&apos;s integrated modules, purpose-built specifically for Saudi compliance and the unique needs of organizations in the Kingdom.</p>
+                <p className="mt-2 text-cyan-100 max-w-2xl">Explore DataMind&apos;s integrated modules, purpose-built specifically for Saudi compliance and the unique needs of organizations in the Kingdom.</p>
               </div>
               {/* removed Back to Home button per request */}
             </div>
