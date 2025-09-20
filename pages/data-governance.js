@@ -67,14 +67,17 @@ export default function DataGovernance() {
           <section id="data-discovery" className="mb-12">
             <div className="flex flex-col md:flex-row-reverse items-stretch gap-6">
               <div className="w-full md:w-80 flex-shrink-0 md:ml-4 relative z-0">
-                <div className="relative h-64 md:h-full rounded-md overflow-hidden">
-                  <Image
-                    src="/images/DataDiscovery.png"
-                    alt="Data Discovery"
-                    fill
-                    sizes="(max-width: 768px) 260px, 400px"
-                    className="object-cover"
-                  />
+                {/* Gradient frame matching Unified Data Dictionary */}
+                <div className="rounded-lg p-1 bg-gradient-to-r from-cyan-400 via-indigo-500 to-purple-500 shadow-sm h-64 md:h-full">
+                  <div className="relative h-64 md:h-full rounded-md overflow-hidden bg-white border-2 border-gray-100 dark:border-gray-800">
+                    <Image
+                      src="/images/DataDiscovery.png"
+                      alt="Data Discovery"
+                      fill
+                      sizes="(max-width: 768px) 260px, 400px"
+                      className="object-cover"
+                    />
+                  </div>
                 </div>
               </div>
 
