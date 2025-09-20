@@ -16,8 +16,8 @@ export default function DataGovernance() {
           <div className="container mx-auto px-6">
             <div className="flex flex-col md:flex-row items-center justify-between">
               <div className="flex-1">
-                <h1 className="text-3xl md:text-4xl font-extrabold">Complete Data Governance and Security Solutions</h1>
-                <p className="mt-2 text-cyan-100 max-w-2xl">Explore DataMind&apos;s integrated modules, purpose-built specifically for Saudi compliance and the unique needs of organizations in the Kingdom.</p>
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold">Complete Data Governance and Security Solutions</h1>
+                <p className="mt-3 text-cyan-100 text-base md:text-lg lg:text-xl max-w-3xl">Explore DataMind&apos;s integrated modules, purpose-built specifically for Saudi compliance and the unique needs of organizations in the Kingdom.</p>
               </div>
               <div className="hidden md:block md:flex-shrink-0 md:ml-8">
                 <div className="relative w-80 h-44 md:w-[440px] md:h-[280px] lg:w-[520px] lg:h-[320px] rounded-2xl overflow-hidden shadow-2xl ring-1 ring-gray-200 border border-white/30 bg-white/50">
