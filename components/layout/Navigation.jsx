@@ -62,28 +62,12 @@ export default function Navigation() {
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-100 to-blue-100 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity -z-0"></div>
             </a>
             <div className="dropdown-content-professional">
-              <a href="#ciam" className="dropdown-item-professional">
-                <span className="text-indigo-600 mr-3">�</span>
-                <div className="font-medium">CIAM</div>
-              </a>
-              <a href="#workforce-iam" className="dropdown-item-professional">
-                <span className="text-cyan-600 mr-3">👥</span>
-                <div className="font-medium">Workforce IAM</div>
-              </a>
-              <a href="#api-security" className="dropdown-item-professional">
-                <span className="text-purple-600 mr-3">�</span>
-                <div className="font-medium">API Security</div>
-              </a>
-              <a href="#pam" className="dropdown-item-professional">
-                <span className="text-red-600 mr-3">�️</span>
-                <div className="font-medium">PAM</div>
-              </a>
-                  <Link href="/data-governance" legacyBehavior>
-                    <a className="dropdown-item-professional">
-                      <span className="text-emerald-600 mr-3">📚</span>
-                      <div className="font-medium">Data Mind</div>
-                    </a>
-                  </Link>
+              <Link href="/data-governance" legacyBehavior>
+                <a className="dropdown-item-professional">
+                  <span className="text-emerald-600 mr-3">📚</span>
+                  <div className="font-medium">Data Mind</div>
+                </a>
+              </Link>
             </div>
           </div>
           <a href="#contact" className="relative px-4 py-2 text-white bg-cyan-600 hover:bg-cyan-700 transition-all font-medium rounded-full shadow-md flex items-center">

@@ -105,22 +105,6 @@ export default function NavigationAICodeGen() {
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-100 to-blue-100 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity -z-0"></div>
             </button>
             <div className={`dropdown-content-professional absolute left-0 mt-2 min-w-[220px] bg-white rounded-xl shadow-lg border border-cyan-100 z-50 ${openDropdown === 'products' ? '' : 'hidden'}`}>
-              <a href="#ciam" className="dropdown-item-professional">
-                <span className="text-indigo-600 mr-3">🔒</span>
-                <div className="font-medium">CIAM</div>
-              </a>
-              <a href="#workforce-iam" className="dropdown-item-professional">
-                <span className="text-cyan-600 mr-3">👥</span>
-                <div className="font-medium">Workforce IAM</div>
-              </a>
-              <a href="#api-security" className="dropdown-item-professional">
-                <span className="text-purple-600 mr-3">🔐</span>
-                <div className="font-medium">API Security</div>
-              </a>
-              <a href="#pam" className="dropdown-item-professional">
-                <span className="text-red-600 mr-3">🛡️</span>
-                <div className="font-medium">PAM</div>
-              </a>
               <Link href="/data-governance" legacyBehavior>
                 <a className="dropdown-item-professional">
                   <span className="text-emerald-600 mr-3">📚</span>
