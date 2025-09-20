@@ -62,17 +62,33 @@ export default function DataGovernance() {
           </section>
 
           <section id="data-discovery" className="mb-12">
-            <h2 className="text-2xl font-bold mb-3">Data Discovery System</h2>
-            <p className="text-gray-700 mb-4">Our dual-mode engines combine AI-powered contextual analysis with rule-based precision scanning to identify sensitive data across your entire organization. Critically identifies personal data subject to PDPL and critical/sensitive data defined by NCA frameworks; assists in creating a comprehensive data inventory (PDPL Article 14) and mapping data flows.</p>
-            <div className="bg-white rounded-lg shadow p-6">
-              <h3 className="font-semibold text-lg mb-2">Key Features</h3>
-              <ul className="list-none space-y-2 text-gray-700">
-                <li>✓ All data states coverage (at rest/in use/in motion)</li>
-                <li>✓ Scans endpoints, Exchange, SharePoint, file-servers</li>
-                <li>✓ Pre-built templates (PII, IP, financial)</li>
-                <li>✓ Scheduled scans & gradual roll-out capability</li>
-                <li>✓ Comprehensive PDPL & NCA-DCC audit reports</li>
-              </ul>
+            <div className="flex flex-col md:flex-row-reverse items-stretch gap-6">
+              <div className="w-full md:w-80 flex-shrink-0 md:ml-4 relative z-0">
+                <div className="relative h-64 md:h-full rounded-md overflow-hidden">
+                  <Image
+                    src="/images/DataDiscovery.png"
+                    alt="Data Discovery"
+                    fill
+                    sizes="(max-width: 768px) 260px, 400px"
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+
+              <div className="md:flex-1 md:pr-6 relative z-10">
+                <h2 className="text-2xl font-bold mb-3">Data Discovery System</h2>
+                <p className="text-gray-700 mb-4">Our dual-mode engines combine AI-powered contextual analysis with rule-based precision scanning to identify sensitive data across your entire organization. Critically identifies personal data subject to PDPL and critical/sensitive data defined by NCA frameworks; assists in creating a comprehensive data inventory (PDPL Article 14) and mapping data flows.</p>
+                <div className="bg-white rounded-lg shadow p-6">
+                  <h3 className="font-semibold text-lg mb-2">Key Features</h3>
+                  <ul className="list-none space-y-2 text-gray-700">
+                    <li>✓ All data states coverage (at rest/in use/in motion)</li>
+                    <li>✓ Scans endpoints, Exchange, SharePoint, file-servers</li>
+                    <li>✓ Pre-built templates (PII, IP, financial)</li>
+                    <li>✓ Scheduled scans & gradual roll-out capability</li>
+                    <li>✓ Comprehensive PDPL & NCA-DCC audit reports</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </section>
 
