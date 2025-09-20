@@ -34,14 +34,17 @@ export default function DataGovernance() {
             <div className="flex flex-col md:flex-row items-stretch gap-6">
               {/* Image on left for md+; stack on mobile */}
               <div className="w-full md:w-80 flex-shrink-0 md:mr-4 order-1 md:order-none relative z-0">
-                <div className="relative h-64 md:h-full rounded-md overflow-hidden">
-                  <Image
-                    src="/images/Unified Data Dictionary.png"
-                    alt="Unified Data Dictionary"
-                    fill
-                    sizes="(max-width: 768px) 260px, 400px"
-                    className="object-cover"
-                  />
+                {/* Modern gradient frame: outer gradient + padded inner white container with thicker border */}
+                <div className="rounded-lg p-1 bg-gradient-to-r from-cyan-400 via-indigo-500 to-purple-500 shadow-sm h-64 md:h-full">
+                  <div className="relative h-64 md:h-full rounded-md overflow-hidden bg-white border-2 border-gray-100 dark:border-gray-800">
+                    <Image
+                      src="/images/Unified Data Dictionary.png"
+                      alt="Unified Data Dictionary"
+                      fill
+                      sizes="(max-width: 768px) 260px, 400px"
+                      className="object-cover"
+                    />
+                  </div>
                 </div>
               </div>
 
