@@ -290,7 +290,7 @@ export default function Home() {
                   <Link href="/data-governance" legacyBehavior>
                     <a className="dropdown-item-professional">
                       <span className="text-emerald-600 mr-3">📚</span>
-                      <div className="font-medium">Data Governance</div>
+                      <div className="font-medium">Data Mind</div>
                     </a>
                   </Link>
                 </div>
