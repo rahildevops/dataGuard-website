@@ -272,8 +272,10 @@ export default function Home() {
                 </a>
                 <div className="dropdown-content-professional">
                   <Link href="/data-governance" legacyBehavior>
-                    <a className="dropdown-item-professional">
-                      <span className="text-emerald-600 mr-3">📚</span>
+                    <a className="dropdown-item-professional flex items-center">
+                      <span className="mr-3" style={{width: 28, height: 28}}>
+                        <Image src="/images/DataMind.png" alt="Data Mind" width={28} height={28} className="object-contain" />
+                      </span>
                       <div className="font-medium">Data Mind</div>
                     </a>
                   </Link>

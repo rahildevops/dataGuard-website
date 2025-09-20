@@ -106,8 +106,10 @@ export default function NavigationAICodeGen() {
             </button>
             <div className={`dropdown-content-professional absolute left-0 mt-2 min-w-[220px] bg-white rounded-xl shadow-lg border border-cyan-100 z-50 ${openDropdown === 'products' ? '' : 'hidden'}`}>
               <Link href="/data-governance" legacyBehavior>
-                <a className="dropdown-item-professional">
-                  <span className="text-emerald-600 mr-3">📚</span>
+                <a className="dropdown-item-professional flex items-center">
+                  <span className="mr-3" style={{width: 28, height: 28}}>
+                    <Image src="/images/DataMind.png" alt="Data Mind" width={28} height={28} className="object-contain" />
+                  </span>
                   <div className="font-medium">Data Mind</div>
                 </a>
               </Link>
