@@ -31,9 +31,22 @@ export default function DataGovernance() {
 
         <main className="container mx-auto px-6 py-12">
           <section id="unified-dictionary" className="mb-12">
-            <h2 className="text-2xl font-bold mb-3">Unified Data Dictionary</h2>
             <div className="flex flex-col md:flex-row items-stretch gap-6">
-              <div className="md:flex-1 md:pr-6">
+              {/* Image on left for md+; stack on mobile */}
+              <div className="w-full md:w-80 flex-shrink-0 md:mr-4 order-1 md:order-none relative z-0">
+                <div className="relative h-64 md:h-full rounded-md overflow-hidden">
+                  <Image
+                    src="/images/Unified Data Dictionary.png"
+                    alt="Unified Data Dictionary"
+                    fill
+                    sizes="(max-width: 768px) 260px, 400px"
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+
+              <div className="md:flex-1 md:pl-6 order-2 md:order-none relative z-10">
+                <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 pl-3 border-l-4 border-cyan-600">Unified Data Dictionary</h2>
                 <p className="text-gray-700 mb-4 text-left">Our centralized repository forms the foundation of every module with bilingual (Arabic/English) support for all file-types, document-types and information-types. Essential foundation for consistent data governance.</p>
                 <div className="bg-white rounded-lg shadow p-6">
                   <h4 className="font-semibold text-lg mb-2">Key Features</h4>
@@ -43,18 +56,6 @@ export default function DataGovernance() {
                     <li>✓ Multi-format support: text, images, PDF/XPS, Office, CAD</li>
                     <li>✓ Feeds all modules for policy-driven consistency</li>
                   </ul>
-                </div>
-              </div>
-
-              <div className="w-full md:w-80 flex-shrink-0 md:ml-4">
-                <div className="relative h-64 md:h-full rounded-md overflow-hidden dg-scale">
-                  <Image
-                    src="/images/Unified Data Dictionary.png"
-                    alt="Unified Data Dictionary"
-                    fill
-                    sizes="(max-width: 768px) 260px, 400px"
-                    className="object-cover"
-                  />
                 </div>
               </div>
             </div>
