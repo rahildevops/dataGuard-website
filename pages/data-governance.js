@@ -46,7 +46,7 @@ export default function DataGovernance() {
               </div>
 
               <div className="md:flex-1 md:pl-6 order-2 md:order-none relative z-10">
-                <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 pl-3 border-l-4 border-cyan-600">Unified Data Dictionary</h2>
+                <h2 className="text-2xl font-bold mb-3 pl-3 border-l-4 border-cyan-600 text-gray-900">Unified Data Dictionary</h2>
                 <p className="text-gray-700 mb-4 text-left">Our centralized repository forms the foundation of every module with bilingual (Arabic/English) support for all file-types, document-types and information-types. Essential foundation for consistent data governance.</p>
                 <div className="bg-white rounded-lg shadow p-6">
                   <h4 className="font-semibold text-lg mb-2">Key Features</h4>
