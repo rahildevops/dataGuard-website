@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
-import Navigation from '../components/layout/Navigation'
+import ResponsiveNavigation from '../components/layout/ResponsiveNavigation'
 export default function DataGovernance() {
   return (
     <>
@@ -11,7 +11,7 @@ export default function DataGovernance() {
       </Head>
 
       <div className="min-h-screen bg-gradient-to-b from-white to-blue-50 text-gray-800" style={{ fontFamily: 'Inter, sans-serif' }}>
-        <Navigation />
+        <ResponsiveNavigation />
         <header className="bg-gradient-to-r from-cyan-600 to-indigo-600 text-white py-12 shadow-lg">
           <div className="container mx-auto px-6">
             <div className="flex flex-col md:flex-row items-center justify-between">

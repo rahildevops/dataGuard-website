@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
-import Navigation from '../components/layout/Navigation';
 import { useState, useEffect, useMemo, useRef } from 'react';
+import ResponsiveNavigation from '../components/layout/ResponsiveNavigation';
 
 export default function Home() {
   // Hide scrollbar with custom CSS
@@ -208,7 +208,8 @@ export default function Home() {
 
       <div className="text-gray-800 pt-20" style={{ fontFamily: 'Inter, sans-serif', background: 'linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)' }}>
         
-  <Navigation />
+        {/* Navigation Bar */}
+        <ResponsiveNavigation />
 
         {/* Header & Hero Section */}
         <header className="bg-gradient-to-br from-cyan-500 via-blue-500 to-indigo-600 text-white shadow-2xl relative mb-8">
