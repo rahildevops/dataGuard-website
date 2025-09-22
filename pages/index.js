@@ -123,7 +123,7 @@ export default function Home() {
     { name: "SailPoint", logo: "/images/sailpoint.png" },
     { name: "Saviynt", logo: "/images/saviynt.jpeg" },
     { name: "One Identity", logo: "/images/one-ideneity.png" },
-    { name: "Keycloak", logo: "/images/keycloak.png" },
+    { name: "Monofor", logo: "/images/monofor.png" },
     { name: "CyberArk", logo: "/images/cyberark.png" },
     { name: "BeyondTrust", logo: "/images/beyondtrust.png" },
     { name: "Delinea", logo: "/images/delinea.jpeg" },
