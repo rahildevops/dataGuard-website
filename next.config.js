@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // Running as a Node-backed Next.js app (not static export)
+  // Enable static export output for static hosting
+  output: 'export',
   images: {
     domains: ['localhost'],
     unoptimized: true,
@@ -9,5 +10,6 @@ const nextConfig = {
   trailingSlash: true,
 };
 
-// Note: using server output for Node-backed deployments
+// Note: enabling static export. This will make Next write static files
+// under `.next/output` which we will copy to `out/` for hosts expecting it.
 module.exports = nextConfig;

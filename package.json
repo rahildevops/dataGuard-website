@@ -6,6 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "export": "node ./scripts/move-export-to-out.js",
+    "build:export": "next build && npm run export",
     "lint": "next lint"
   },
   "keywords": [],
