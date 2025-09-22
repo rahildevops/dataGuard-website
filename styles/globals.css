@@ -38,7 +38,8 @@ body {
 
 /* Professional dropdown styles */
 .dropdown-content-professional {
-  display: none;
+  /* Allow programmatic show/hide (don't force display:none) */
+  display: block;
   position: absolute;
   top: 100%;
   left: 0;
@@ -51,14 +52,16 @@ body {
   z-index: 1000;
   opacity: 0;
   transform: translateY(-8px);
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.16s cubic-bezier(0.4, 0, 0.2, 1);
   padding: 6px 0;
+  pointer-events: none; /* prevent interaction when hidden */
 }
 
+/* Hover still works */
 .dropdown:hover .dropdown-content-professional {
-  display: block;
   opacity: 1;
   transform: translateY(0);
+  pointer-events: auto;
 }
 
 .dropdown-item-professional {
