@@ -208,7 +208,7 @@ export default function ResponsiveNavigation() {
               </div>
             </div>
 
-            <a href="#contact" className="relative px-4 py-2 text-white bg-cyan-600 hover:bg-cyan-700 transition-all font-medium rounded-full shadow-md flex items-center">
+            <a href="/#contact" className="relative px-4 py-2 text-white bg-cyan-600 hover:bg-cyan-700 transition-all font-medium rounded-full shadow-md flex items-center">
               <span className="relative z-10">Contact Us</span>
             </a>
           </div>
@@ -289,7 +289,7 @@ export default function ResponsiveNavigation() {
               </div>
             </div>
 
-            <a href="#contact" className="block mx-4 mt-2 px-4 py-3 text-white bg-cyan-600 hover:bg-cyan-700 transition-all font-medium rounded-full text-center" onClick={closeMenu}>
+            <a href="/#contact" className="block mx-4 mt-2 px-4 py-3 text-white bg-cyan-600 hover:bg-cyan-700 transition-all font-medium rounded-full text-center" onClick={closeMenu}>
               Contact Us
             </a>
           </div>
